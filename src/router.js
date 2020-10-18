@@ -6,20 +6,21 @@ const Chat = () => import('./views/Chat.vue')
 
 Vue.use(VueRouter)
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
+  // base: "/#",
   routes: [
-        {
-            path: "/",
-            component: SingIn
-        },
-        {
-            path: '/singup',
-            component: SingUp
-        },
-        {
-            path: '/chat',
-            component: Chat
-        }
+    {
+      path: "/",
+      component: SingIn
+    },
+    {
+      path: '/singup',
+      component: SingUp
+    },
+    {
+      path: '/chat',
+      component: Chat
+    }
   ],
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
